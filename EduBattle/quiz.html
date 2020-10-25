@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>EDU BATTLE</title>
+
+    <style media="screen">
+
+body{
+         font-family: "Times New Roman", Times, serif;
+         background-color: white;
+         height: 100%;
+      }
+      .card {
+      box-shadow: 0 6px 8px 4px rgba(189, 240, 222, 0.027);
+      border-radius: 25px;
+      background-color: lavender;
+      }
+     
+     .container-col {
+     margin-top: 100px;
+    } 
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color:#0bddd3;">
+ <a class="navbar-brand" href="full-page.html">
+   <img src="images/logo.png" width="30" height="30" alt="" loading="lazy">
+ </a>
+
+     <!-- <a class="navbar-brand" href="#">EDU BATTLE</a> -->
+     <h3 style="padding-top : 5px; color:white; margin-left: -10px;">EDU BATTLE</h3>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse col-md-8" id="navbarNavDropdown">
+       <ul class="navbar-nav">
+         <li class="nav-item active">
+           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="about-us.html">About Us</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="feedback.html">Contact Us</a>
+         </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Explore
+           </a>
+           <div class="dropdown-menu dropColour" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="secure-feature.html">Secure Exam</a>
+            <a class="dropdown-item" href="notes.html">Notes</a>
+            <a class="dropdown-item" href="assignments.html">Assignments</a>
+            <a class="dropdown-item" href="quiz.html">Quiz</a>
+            <a class="dropdown-item" href="understanding-better.html">Understanding Better</a>
+            <a class="dropdown-item" href="https://edubattle-forum.herokuapp.com/">Discussion Forum</a>
+           </div>
+         </li>
+       </ul>
+      </div>
+      <div class="col-2 d-none d-lg-block">
+        <i class="fa fa-user " style="color: black; padding: 13px;"></i>Student's Portal
+      </div>
+   </nav>
+
+  <div class="container-col container">
+    <div class="d-flex justify-content-center mgn1">
+    <div class="card col-12" style="padding: 50px;">
+      <div class="col-12 d-flex justify-content-center">
+        <input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-3">
+          <input type="text" class="form-control" placeholder="Roll No." id="rno" name="rno" required>
+          </div>
+      <div class="col-12 d-flex justify-content-center mt-3">
+      <input type="text" class="form-control" placeholder="Quiz Name/Code." id="title" name="title" required>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <button class="form-control btn1 btnh" onclick="getdata();" data-toggle="collapse" data-target="#qc" aria-expanded="false" aria-controls="qc" type="button" value="submit" id="submitBtn">Submit</button>
+      </div>
+    </div>
+</div>
+</div>
+<div class="container collapse multi-collapse" id="qc" style="margin-top: 50px;">
+  <div class="d-flex justify-content-center mgn1">
+  <div class="card col-12" style="padding: 50px;">
+    <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <textarea class="form-control" type="textarea" id="ques" name="question" maxlength="6000" rows="5" required></textarea>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-center mt-4">
+        <button class="col-4 form-control" type="submit" value="a"  onclick="op1();" id="optionBtn1"></button>
+        <button class="offset-1 col-4 form-control" type="submit" onclick="op2();" value="b" id="optionBtn2"></button>
+      </div>
+      <div class="row d-flex justify-content-center mt-4">
+        <button class="col-4 form-control" type="submit" value="c"  onclick="op3();" id="optionBtn3"></button>
+        <button class="offset-1 col-4 form-control" type="submit" value="d"  onclick="op4();" id="optionBtn4"></button>
+      </div>
+      <div class="row d-flex justify-content-center mt-4">
+        <button class="form-control btnh btn1" type="submit"  onclick="getdata2();" id="nxtBtn">Next &nbsp; &rarr;</button>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center" >
+    <h5 class="text-success" id="display"></h5>
+    </div>
+      </div>
+      </div>
+      </div>
+    <br><br>
+  <!-- Footer -->
+<footer>
+  <div class="container-fluid" style="background-color: #0bddd3; margin-top: 50px;">
+    <div class="container" style="padding-bottom: 30px; padding-top: 30px;">
+      <div class="d-none d-lg-block">
+      <div class="row mt-4">
+        <div class="col-lg-4 d-flex justify-content-center">
+              <div class="footer-widget">
+                  <h3 style="margin-bottom: 15px;">Quick Links</h3>
+                      <div><i class="fa fa-caret-right"></i> <a href="about-us.html" class="fta">About Us </a></div>
+                      <div><i class="fa fa-caret-right"></i> <a href="#aim" class="fta">Our Aim</a></div>
+                      <div><i class="fa fa-caret-right"></i> <a href="#choose" class="fta">Why Choose us?</a></div>
+                      <div><i class="fa fa-caret-right"></i> <a href="feedback.html" class="fta">Feedback</a></div>
+              </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center">
+              <div class="footer-widget">
+                  <h3 style="margin-bottom: 15px;">Social</h3>
+                      <div><i class="fa fa-facebook"></i> <a href="www.facebook.com" class="fta">Facebook</a></div>
+                      <div><i class="fa fa-instagram"></i> <a href="www.instagram.com" class="fta">Instagram</a></div>
+                      <div><i class="fa fa-whatsapp"></i> <a href="www.whatsapp.com" class="fta">WhatsApp</a></div>
+                      <div><i class="fa fa-twitter"></i> <a href="www.twitter.com" class="fta">Twitter</a></div>
+              </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center">
+              <div class="footer-widget">
+                  <h3 style="margin-bottom: 15px;">Contact Us</h3>
+                      <div><i class="fa fa-map-marker"></i> Kiet, Ghaziabad </div>
+                      <div><i class="fa fa-phone"></i> (+91) 8439705872 </div>
+                      <div><i class="fa fa-envelope"></i> info.edubattle@gmail.com</div>
+                      <div><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</div>
+              </div>
+        </div>
+      </div>
+      </div>
+<div class="col-sm-12 mt-4 mb-4">
+  <p class="ft">Designed with ❤️ By <a target="_blank" href="about-us.html" style="color: black;">Team EduBattle</a></p>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script type="text/javascript">
+
+  var cnt =1;
+  var ans;
+  var cans;
+  var score = 0;
+
+  function getdata() {
+    var  title =document.getElementById("title").value;
+
+firebase.database().ref('TeachersQuiz/'+title+'/'+cnt).once('value').then(function (snapshort) {
+
+if(snapshort.exists()){
+var ques=snapshort.val().Question;
+var op1=snapshort.val().Option1;
+var op2=snapshort.val().Option2;
+var op3=snapshort.val().Option3;
+var op4=snapshort.val().Option4;
+var cop=snapshort.val().CorrectOption;
+cans = cop;
+document.getElementById("ques").innerHTML=  ques;
+document.getElementById("optionBtn1").innerHTML=op1;
+document.getElementById("optionBtn2").innerHTML=op2;
+document.getElementById("optionBtn3").innerHTML=op3;
+document.getElementById("optionBtn4").innerHTML=op4;
+}
+else{
+var r = confirm("Please Enter the correct code");
+if (r == true){
+  window.location.reload();
+}
+}
+});
+
+cnt++;
+  }
+//
+
+  function getdata2() {
+    var  title =document.getElementById("title").value;
+firebase.database().ref('TeachersQuiz/'+title+'/'+cnt).once('value').then(function (snapshort) {
+  if(snapshort.exists()){
+var ques=snapshort.val().Question;
+var op1=snapshort.val().Option1;
+var op2=snapshort.val().Option2;
+var op3=snapshort.val().Option3;
+var op4=snapshort.val().Option4;
+var cop=snapshort.val().CorrectOption;
+cans = cop;
+document.getElementById("ques").innerHTML=  ques;
+document.getElementById("optionBtn1").innerHTML=op1;
+document.getElementById("optionBtn2").innerHTML=op2;
+document.getElementById("optionBtn3").innerHTML=op3;
+document.getElementById("optionBtn4").innerHTML=op4;
+document.getElementById("display").innerHTML="";
+}
+else{
+var r = confirm("Congratulations! You have completed the quiz. Your score is "+ score);
+  if (r == true){
+    window.location.reload();
+  }
+}
+});
+cnt++;
+  }
+  function op1(){
+  var ans =   document.getElementById("optionBtn1").value;
+  if (ans === cans){
+      document.getElementById("display").innerHTML="⚡⚡Congratulations! That's Correct⚡⚡";
+      score++;
+  }
+  else {
+    document.getElementById("display").innerHTML="⚡⚡Sorry! That's Incorrect⚡⚡";
+  }
+
+  }
+  function op2(){
+  var ans =   document.getElementById("optionBtn2").value;
+  if (ans === cans){
+      document.getElementById("display").innerHTML="⚡⚡Congratulations! That's Correct⚡⚡";
+      score++;
+  }
+  else {
+    document.getElementById("display").innerHTML="⚡⚡Sorry! That's Incorrect⚡⚡";
+  }
+  }
+  function op3(){
+  var ans =   document.getElementById("optionBtn3").value;
+  if (ans === cans){
+      document.getElementById("display").innerHTML="⚡⚡Congratulations! That's Correct⚡⚡";
+      score++;
+  }
+  else {
+    document.getElementById("display").innerHTML="⚡⚡Sorry! That's Incorrect⚡⚡";
+  }
+  }
+  function op4(){
+  var ans =   document.getElementById("optionBtn4").value;
+  if (ans === cans){
+    document.getElementById("display").innerHTML="⚡⚡Congratulations! That's Correct⚡⚡";
+    score++;
+  }
+  else {
+    document.getElementById("display").innerHTML="⚡⚡Sorry! That's Incorrect⚡⚡";
+  }
+  }
+</script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
+<script>
+   // Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDnM7P4uHmHeM3uN2aVFq5ElqHEQh0g38Y",
+    authDomain: "edu-battle.firebaseapp.com",
+    databaseURL: "https://edu-battle.firebaseio.com",
+    projectId: "edu-battle",
+    storageBucket: "edu-battle.appspot.com",
+    messagingSenderId: "723495185185",
+    appId: "1:723495185185:web:1e1626551213f1cf112c60",
+    measurementId: "G-NDGSP90J4S"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>

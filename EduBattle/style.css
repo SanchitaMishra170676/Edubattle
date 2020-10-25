@@ -1,0 +1,137 @@
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25)), url("images/bg.jpeg");
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-image2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/bg2.png");
+  padding-top: 100px;
+  height: 110%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.hero-text {
+  text-align: center;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+
+.tutHref{
+  color: white;
+}
+
+.tutHref:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.login-color{
+  color : #000;
+}
+
+.ft {
+    text-align: center;
+    }
+.fta {
+    color: black;
+    }
+.mgn{
+  margin-bottom:70px;
+}
+
+.pdg{
+  padding-left: 50px;
+  padding-right:50px;
+}
+.heading {
+  font-size: xx-large;
+ }
+ #uploader {
+  -webkit-appearance: none;
+  appearance: none;
+  width:420%;
+  margin-bottom: 5px;
+  }
+  .mgn1 {
+  margin: 10px;
+  }
+  .btn1 {
+    max-height: 40px;
+    max-width: 300px;
+    text-align: center;
+    font-size: large;
+    }
+    .btnh {
+      background-color: #0bddd3;
+    }
+   .btnh:hover{
+   background-color: #22858a;
+   color: black;
+   }
+   .mgn2 {
+    margin-left: 8%;
+    margin-right : 8%;
+    margin-top: 10px;
+    padding-top : 30px;
+  }
+  .sp{
+    margin:25px;
+    padding : 2%;
+    padding-left: 25px;
+    background-color: white;
+  } 
+  .cbtn {
+    color: black;
+    font-size: larger;
+    }
+  .cbtn:hover{
+    background-color: #0bddd3;
+    }
+  .abtn:hover{
+    text-decoration: none;
+  }
+  #webCamWindow {
+    border-radius: 20px;
+    width: 230px;
+    height:  240px;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    left: 0;
+  }
+  
+  #canvas {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height:  240px;
+  }
+  
+  #movement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid red;
+    background: rgba(255,0,0,0.3);
+  }
+  
